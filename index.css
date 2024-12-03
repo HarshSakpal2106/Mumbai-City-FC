@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Varela+Round&display=swap');
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #8DC8F4;
+}
+
+
+
+/* HEADER */
+
+.etihad-header {
+  height: 40px;
+  width: 100%;
+  background-color: #00285C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.etihad-header img {
+  height: 32px;
+  width: auto;
+  cursor: pointer;
+}
+
+.etihad-header a {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  background-color: #6EADE0;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#mcfc-logo {
+  height: 90%;
+  width: auto;
+  position: absolute;
+  left: 3%;
+}
+
+.fa-bars {
+  position: absolute;
+  right: 3%;
+  color: #0E386C;
+  font-size: 30px;
+}
+
+.fa-user {
+  position: absolute;
+  right: 15%;
+  color: white;
+  font-size: 25px;
+}
+
+
+
+/* MATCH REPORT */
+
+.match-report-container {
+  padding: 30px 15px;
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.match-report-container::-webkit-scrollbar {
+  display: none;
+}
+
+.match-report-card {
+  width: 100%;
+  height: 550px;
+  border-radius: 10px;
+  position: relative;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.match-report-card img {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transition: all 0.5s ease;
+}
+
+.match-report-card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 15px;
+  height: 60%;
+  width: 100%;
+  background: linear-gradient(to top, #000000, #FFFFFF00);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: inherit;
+  box-sizing: border-box;
+  font-family: "Varela Round", serif;
+  font-style: normal;
+}
+
+.headline {
+  margin: 15px 0px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.report-news {
+  font-size: 12px;
+}
+
+.match-report-card:hover img {
+  transform: scale(1.05);
+}
+
+.match-report-card:active,
+.match-report-card:focus {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+
+/* STANDINGS */
+
+.standings-container {
+  padding: 15px 15px;
+  font-family: "Varela Round", serif;
+  font-style: normal;
+  background-color: white;
+  position: relative;
+}
+
+.standings-h1 {
+  margin: 10px 0px 25px;
+  color: #00285C;
+}
+
+.more-btn {
+  background-color: transparent;
+  border: 1px solid #DCA46B;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: #DCA46B;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background-color: #DCA46B;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  color: black;
+}
+
+.more-btn:focus, .more-btn:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+table, th, td {
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #DCA46B;
+  color: #00285C;
+  font-weight: bold;
+}
+
+th, td {
+  text-align: center;
+  padding: 15px 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+td {
+  background-color: #00285C;
+  color: white;
+}
+
+.team-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+td img {
+  height: 35px;
+}
+
+tbody tr:nth-child(10) td {
+  background-color: #4078AB;
+}
+
+tbody tr {
+  position: relative;
+}
+
+tbody tr:not(:nth-child(9))::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  width: 94%;
+  border-bottom: 1px solid #4078AB;
+}
